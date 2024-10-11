@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{font-family: "Poppins", sans-serif;font-weight: 400;}
+h1{font-size: 64px; font-weight:700; max-width: 80%;}
+h3{font-size: 32px;font-weight: 700;}
+h5{font-size: 18px;}
+h4{font-size: 18px; font-weight: 700;}
+
+p{font-weight: 500; font-size: 18px; color: #9e9a9a;}
+
+/* banner */
+.banner{background-color: #C1DCDC;}
+.plant-wrap{left: 20px; bottom: -390px;  max-width: 100%;}
+.vector-wrap{right: 10px; bottom: -100px; width: 15%;}
+.vector2-wrap{top: 200px; right: 550px; width: 35%;}
+
+/* buttons */
+.btn-primary{background-color: #C1DCDC;border: none;}
+.btn-secondary{background-color:#ffffff;border: none;}
+
+/* login & Register */
+/* .card{width: 350px;} */
+.selling{max-width:256px;}
+
+/* Card */
+.products p{max-width: 196px;}
+.best-product{max-width: 80%; max-height: 100%; }
+
+/* product-card */
+.product-card{width: 260px;}
+
+/* .Large-Assortment{width: 400px;} */
+.Large{width:96px;}
+
+.middle-image{margin-top: 100px;}
+
+/* Categories */
+.categorie::after{content: '';
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left:0%;
+    background-color: #C1DCDC;
+    z-index: -1;}
+
+    .Handicrafts{
+        max-width: 80%;
+        max-height: 100%;
+    }
+    .product_section{margin-top: 100px;}
+
+    /* Check Out Recent Review */
+.recent-review {
+    padding: 150px 0;
+}
+
+.recent-review .Check-lines {
+    z-index: -1;
+    left: 0;
+    bottom: -20px;
+}
+
+.check-review {
+    max-width: 380px;
+}
+
+.carousel-indicators {
+    left: 0;
+    top: auto;
+    bottom: -70px;
+    z-index: auto;
+}
+.carousel-indicators .circle-button {
+    background: #906CF94F;
+    border-radius: 100%;
+    width: 20px;
+    height: auto;
+}
+
+
+.carousel-indicators .active {
+    background: #906CF9;
+}
+.review-card {
+    max-width:100%;
+    background-color: #C1DCDC;
+}
+.about{margin-top: 100px;}
+.categories{margin-top: 150px;}
+.explore{margin-bottom: 100px;}
+
+/* footer */
+.social-media{width: 48px; height: 48px;}
+.find-product{max-width: 186px;}
+.footer{background-color: #C1DCDC;}
+.Reserved{margin-top:100px;}
