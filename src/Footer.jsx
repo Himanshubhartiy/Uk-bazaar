@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-function Footer() {
+const Footer = () => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleScroll = () => {
+    const element = document.getElementById("contact__section");
+    const rect = element.getBoundingClientRect();
+    const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
+
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+      window.removeEventListener("scroll", handleScroll);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hasAnimated]);
+
   return (
     <div className="footer p-5 mt-5" id="contact__section">
       <div className="container">
         <div className="row">
           <div className="col-6">
             <div>
-              <h3 className="mb-3 footer-heading wow animate__flipInX">
+              <motion.h3
+                className="mb-3 footer-heading"
+                initial={{ opacity: 0, y: -20 }}
+                animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5 }}
+              >
                 Uk-बाज़ार
-              </h3>
+              </motion.h3>
               <p className="find-product">We help you find your dream plant</p>
             </div>
             <div className="row mb-4">
-              <div
-                className="col-4 social-media border border-dark rounded-circle text-center align-content-center mt-4 me-4 wow animate__flipInY"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.1s"
+              <motion.div
+                className="col-4 social-media border border-dark rounded-circle text-center align-content-center mt-4 me-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <svg
                   width="10"
@@ -28,14 +55,15 @@ function Footer() {
                   <path
                     d="M2.66488 15.9168H5.99821V9.24183H9.00155L9.33155 5.92516H5.99821V4.25016C5.99821 4.02915 6.08601 3.81719 6.24229 3.66091C6.39857 3.50463 6.61053 3.41683 6.83155 3.41683H9.33155V0.0834961H6.83155C5.72648 0.0834961 4.66667 0.522483 3.88527 1.30388C3.10387 2.08529 2.66488 3.14509 2.66488 4.25016V5.92516H0.998213L0.668213 9.24183H2.66488V15.9168Z"
                     fill="#1E1E1E"
-                    fill-opacity="0.75"
+                    fillOpacity="0.75"
                   />
                 </svg>
-              </div>
-              <div
-                className="col-4 social-media border border-dark rounded-circle text-center align-content-center mt-4 me-4 wow animate__flipInY"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.3s"
+              </motion.div>
+              <motion.div
+                className="col-4 social-media border border-dark rounded-circle text-center align-content-center mt-4 me-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <svg
                   width="18"
@@ -47,14 +75,15 @@ function Footer() {
                   <path
                     d="M8.99984 0.666504C11.264 0.666504 11.5465 0.674837 12.4348 0.716504C13.3223 0.758171 13.9265 0.897337 14.4582 1.104C15.0082 1.31567 15.4715 1.60234 15.9348 2.06484C16.3586 2.48142 16.6865 2.98533 16.8957 3.5415C17.1015 4.07234 17.2415 4.67734 17.2832 5.56484C17.3223 6.45317 17.3332 6.73567 17.3332 8.99984C17.3332 11.264 17.3248 11.5465 17.2832 12.4348C17.2415 13.3223 17.1015 13.9265 16.8957 14.4582C16.6871 15.0147 16.3591 15.5187 15.9348 15.9348C15.5181 16.3584 15.0143 16.6863 14.4582 16.8957C13.9273 17.1015 13.3223 17.2415 12.4348 17.2832C11.5465 17.3223 11.264 17.3332 8.99984 17.3332C6.73567 17.3332 6.45317 17.3248 5.56484 17.2832C4.67734 17.2415 4.07317 17.1015 3.5415 16.8957C2.98511 16.6869 2.48111 16.359 2.06484 15.9348C1.64101 15.5183 1.31311 15.0144 1.104 14.4582C0.897337 13.9273 0.758171 13.3223 0.716504 12.4348C0.677337 11.5465 0.666504 11.264 0.666504 8.99984C0.666504 6.73567 0.674837 6.45317 0.716504 5.56484C0.758171 4.6765 0.897337 4.07317 1.104 3.5415C1.31253 2.98499 1.64051 2.48094 2.06484 2.06484C2.48123 1.64086 2.98519 1.31295 3.5415 1.104C4.07317 0.897337 4.6765 0.758171 5.56484 0.716504C6.45317 0.677337 6.73567 0.666504 8.99984 0.666504ZM8.99984 4.83317C7.89477 4.83317 6.83496 5.27216 6.05356 6.05356C5.27216 6.83496 4.83317 7.89477 4.83317 8.99984C4.83317 10.1049 5.27216 11.1647 6.05356 11.9461C6.83496 12.7275 7.89477 13.1665 8.99984 13.1665C10.1049 13.1665 11.1647 12.7275 11.9461 11.9461C12.7275 11.1647 13.1665 10.1049 13.1665 8.99984C13.1665 7.89477 12.7275 6.83496 11.9461 6.05356C11.1647 5.27216 10.1049 4.83317 8.99984 4.83317ZM14.4165 4.62484C14.4165 4.34857 14.3068 4.08362 14.1114 3.88827C13.9161 3.69292 13.6511 3.58317 13.3748 3.58317C13.0986 3.58317 12.8336 3.69292 12.6383 3.88827C12.4429 4.08362 12.3332 4.34857 12.3332 4.62484C12.3332 4.9011 12.4429 5.16606 12.6383 5.36141C12.8336 5.55676 13.0986 5.6665 13.3748 5.6665C13.6511 5.6665 13.9161 5.55676 14.1114 5.36141C14.3068 5.16606 14.4165 4.9011 14.4165 4.62484ZM8.99984 6.49984C9.66288 6.49984 10.2988 6.76323 10.7676 7.23207C11.2364 7.70091 11.4998 8.3368 11.4998 8.99984C11.4998 9.66288 11.2364 10.2988 10.7676 10.7676C10.2988 11.2364 9.66288 11.4998 8.99984 11.4998C8.3368 11.4998 7.70091 11.2364 7.23207 10.7676C6.76323 10.2988 6.49984 9.66288 6.49984 8.99984C6.49984 8.3368 6.76323 7.70091 7.23207 7.23207C7.70091 6.76323 8.3368 6.49984 8.99984 6.49984Z"
                     fill="#1E1E1E"
-                    fill-opacity="0.75"
+                    fillOpacity="0.75"
                   />
                 </svg>
-              </div>
-              <div
-                className="col-4 social-media border border-dark rounded-circle text-center align-content-center mt-4 me-4 wow animate__flipInY"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.5s"
+              </motion.div>
+              <motion.div
+                className="col-4 social-media border border-dark rounded-circle text-center align-content-center mt-4 me-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.5 }}
               >
                 <svg
                   width="20"
@@ -69,7 +98,7 @@ function Footer() {
                     fill-opacity="0.75"
                   />
                 </svg>
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="col-12 col-md-6 mb-4">
@@ -98,7 +127,7 @@ function Footer() {
                   <p>Our story</p>
                 </a>
               </div>
-              <div className="col-4 conatact">
+              <div className="col-4 contact">
                 <h4 className="mb-4">Contact</h4>
                 <a href="#" className="text-decoration-none">
                   <p>Getting Started</p>
@@ -119,6 +148,6 @@ function Footer() {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

@@ -6,13 +6,13 @@ import "./responsive.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "animate.css/animate.min.css";
-import { WOW } from "wowjs"; // Named import
+// import "animate.css/animate.min.css";
+// import WOW from "wowjs";
 
-const wow = new WOW({
-  live: false,
-});
-wow.init();
+// const wow = new WOW.WOW({
+//   live: false,
+// });
+// wow.init();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
