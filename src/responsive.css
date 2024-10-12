@@ -20,21 +20,6 @@
     .vector-wrap{right: 10px; bottom: -100px; width: 15%;}
   }
   
-  @media (max-width: 992px) {
-    .plant-wrap {
-      bottom: -390px; 
-      max-width: 490px;  
-      
-    }
-  
-    .vector2-wrap {
-      right: 460px;
-      width: 30%;
-    }
-    
-        .vector-wrap{right: 10px; bottom: -40px; width: 15%;}
- 
-  }
 
   @media (max-width: 1200px) {
     h1{
@@ -45,7 +30,7 @@
       right: 560px;  
     }
     
-    .vector-wrap{right: 10px; bottom: -40px; width: 15%;}
+    .vector-wrap{right: 10px; bottom: -80px; width: 15%;}
   }
   
   @media (max-width: 992px) {
