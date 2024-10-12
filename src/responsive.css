@@ -8,7 +8,7 @@
 .vector-wrap{right: 10px; bottom: -50px; width: 40px;}
 .vector2-wrap{top: 200px; right: 330px; width: 60px;}
   }*/
-  @media (max-width: 1500px) {
+  @media (max-width: 1400px) {
     h1{
         max-width: 100%;
         font-size: 60px;
@@ -20,7 +20,7 @@
     .vector-wrap{right: 10px; bottom: -100px; width: 15%;}
   }
   
-  @media (max-width: 1268px) {
+  @media (max-width: 1300px) {
     h1{
         max-width: 100%;
         font-size: 60px;
