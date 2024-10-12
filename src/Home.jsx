@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import rectangle from "./assets/rectangle.png";
-import plant from "./assets/plant.png";
-import Vector from "./assets/Vector1.png";
-import Vector2 from "./assets/Vector2.png";
+import rectangle from "./assets/rectangle.png"; // Ensure this file exists in src/assets
+import plant from "./assets/plant.png"; // Ensure this file exists in src/assets
+import Vector from "./assets/Vector1.png"; // Ensure this file exists in src/assets
+import Vector2 from "./assets/Vector2.png"; // Ensure this file exists in src/assets
 
 function Home() {
   return (
