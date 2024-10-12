@@ -152,11 +152,41 @@
       right: 290px; 
       width: 15%; 
     }
+    .profile{
+      margin-left: 5px;
+     }
     .footer-heading{font-size: 18px;}
     .find-product{font-size: 12px;}
     .information-content{display: flex; flex-direction: column;}
     
   }
+  @media (max-width: 364px)  {
+    h1{
+        max-width: 100%;
+        font-size:30px ;
+    }
+    .plant-wrap {
+      bottom: -255px; 
+      max-width: 330px;
+    }
+  
+    .vector-wrap {
+      width: 10%; 
+    }
+  
+    .vector2-wrap {
+      top: 230px;
+      right: 250px; 
+      width: 15%; 
+    }
+     .profile{
+      margin-left: 5px;
+     }
+     .footer-heading{font-size: 18px;}
+     .find-product{font-size: 12px;}
+     .information-content{display: flex; flex-direction: column;}
+  }
+ 
 @media (max-width: 320px)  {
     h1{
         max-width: 100%;
