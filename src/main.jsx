@@ -7,9 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "animate.css/animate.min.css";
-import WOW from "wowjs";
+import { WOW } from "wowjs"; // Named import
 
-const wow = new WOW.WOW({
+const wow = new WOW({
   live: false,
 });
 wow.init();
