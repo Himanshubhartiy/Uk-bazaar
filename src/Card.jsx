@@ -42,16 +42,16 @@ function Card() {
             Explore our unique collection of Uttarakhand crafts, handpicked for
             you.
           </p>
-          <motion.div
-            as={Link}
-            to={`/`}
-            className="btn btn-primary btn-lg text-decoration-none text-dark"
-            initial={{ y: 20, opacity: 0 }}
-            animate={hasAnimated ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.8 }}
-          >
-            See more <i className="bi bi-arrow-right"></i>
-          </motion.div>
+          <Link to="./seemore" className="text-decoration-none">
+            <motion.div
+              className="btn btn-primary btn-lg text-dark"
+              initial={{ y: 20, opacity: 0 }}
+              animate={hasAnimated ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8 }}
+            >
+              See more <i className="bi bi-arrow-right"></i>
+            </motion.div>
+          </Link>
         </div>
         <div className="col-12 col-md-8 col-lg-9">
           <div className="row mt-4">

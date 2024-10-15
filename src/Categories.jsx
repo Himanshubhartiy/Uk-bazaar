@@ -39,8 +39,8 @@ function Categories() {
           Categories
         </motion.h3>
         <p className="mb-5">
-          Discover our handcrafted products inspired by the beauty of
-          Uttarakhand
+          Discover authentic Uttarakhand products, crafted with care and
+          inspired by its rich culture.
         </p>
       </div>
 
@@ -80,7 +80,7 @@ function Categories() {
             of Uttarakhand.
           </p>
           <Link
-            to={"/"}
+            to={"/explore"}
             className="btn btn-secondary btn-lg text-decoration-none text-dark explore"
           >
             Explore <i className="bi bi-arrow-right"></i>

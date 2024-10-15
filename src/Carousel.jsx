@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import image1 from "./assets/image1.png";
 import image2 from "./assets/image2.png";
+import image from "./assets/Image.png";
 
 function Carousel() {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -57,32 +58,9 @@ function Carousel() {
               id="carouselExampleIndicators"
               className="carousel slide"
               data-bs-ride="carousel"
+              data-bs-interval="2000" // Slides every 2 seconds
+              data-bs-pause="hover" // Stops sliding on mouse hover
             >
-              <div className="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  className="active circle-button"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  className="circle-button"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  className="circle-button"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-
               <div className="carousel-inner">
                 <motion.div
                   className={`carousel-item active ${
@@ -93,50 +71,30 @@ function Carousel() {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="row justify-content-center px-5 pt-5">
-                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-4 mb-3 me-3">
-                      <div className="card-body px-4 py-5">
-                        <div className="row mb-3">
-                          <div className="col-3">
-                            <img src={image1} alt="cus1" />
-                          </div>
-                          <div className="col-9 align-self-center profile">
-                            <h4 className="card-title">Ramesh Pandey</h4>
-                            <p>Local Artisan</p>
-                          </div>
-                        </div>
-                        <div>
+                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-2 mb-3">
+                      <div className="card-body px-4 py-4">
+                        <div className="text-center">
                           <h6 className="card-subtitle mb-2">
                             Amazing Craftsmanship!
                           </h6>
-                          <p className="card-text mb-3">
+                          <p className="card-text mb-3 review">
                             The traditional Uttarakhand crafts sold here are of
                             excellent quality. I love supporting local artisans
                             through Uk-बाज़ार!
                           </p>
                         </div>
-                      </div>
-                    </div>
-
-                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-4 mb-3 me-3">
-                      <div className="card-body px-4 py-5">
-                        <div className="row mb-3">
-                          <div className="col-3">
-                            <img src={image2} alt="Cus2" />
+                        <div className="">
+                          <div className="text-center p-2">
+                            <img
+                              src={image1}
+                              alt="cus1"
+                              className="profile-image"
+                            />
                           </div>
-                          <div className="col-9 align-self-center profile">
-                            <h4 className="card-title">Suhani Rawat</h4>
-                            <p>Shop Owner</p>
+                          <div className="text-center profile">
+                            <h4 className="card-title">Ramesh Pandey</h4>
+                            <p>Local Artisan</p>
                           </div>
-                        </div>
-                        <div>
-                          <h6 className="card-subtitle mb-2">
-                            Great for Gifts!
-                          </h6>
-                          <p className="card-text mb-3">
-                            Uk-बाज़ार has a fantastic selection of handmade
-                            items, perfect for gifting something unique and
-                            rooted in Uttarakhand's culture.
-                          </p>
                         </div>
                       </div>
                     </div>
@@ -150,50 +108,30 @@ function Carousel() {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="row justify-content-center px-5 pt-5">
-                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-4 mb-3 me-3">
-                      <div className="card-body px-4 py-5">
-                        <div className="row mb-3">
-                          <div className="col-3">
-                            <img src={image1} alt="cus1" />
-                          </div>
-                          <div className="col-9 align-self-center profile">
-                            <h4 className="card-title">Ramesh Pandey</h4>
-                            <p>Local Artisan</p>
-                          </div>
-                        </div>
-                        <div>
-                          <h6 className="card-subtitle mb-2">
-                            Amazing Craftsmanship!
-                          </h6>
-                          <p className="card-text mb-3">
-                            The traditional Uttarakhand crafts sold here are of
-                            excellent quality. I love supporting local artisans
-                            through Uk-बाज़ार!
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-4 mb-3 me-3">
-                      <div className="card-body px-4 py-5">
-                        <div className="row mb-3">
-                          <div className="col-3">
-                            <img src={image2} alt="Cus2" />
-                          </div>
-                          <div className="col-9 align-self-center profile">
-                            <h4 className="card-title">Suhani Rawat</h4>
-                            <p>Shop Owner</p>
-                          </div>
-                        </div>
-                        <div>
-                          <h6 className="card-subtitle mb-2">
+                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-2 mb-3">
+                      <div className="card-body px-4 py-4">
+                        <div className="text-center">
+                          <h6 className="card-subtitle  mb-2">
                             Great for Gifts!
                           </h6>
-                          <p className="card-text mb-3">
+                          <p className="card-text mb-3 review">
                             Uk-बाज़ार has a fantastic selection of handmade
                             items, perfect for gifting something unique and
                             rooted in Uttarakhand's culture.
                           </p>
+                        </div>
+                        <div className="mb-3">
+                          <div className="text-center p-2">
+                            <img
+                              src={image2}
+                              alt="Cus2"
+                              className="profile-image"
+                            />
+                          </div>
+                          <div className="align-self-center text-center profile">
+                            <h4 className="card-title">Suhani Rawat</h4>
+                            <p>Shop Owner</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -207,81 +145,37 @@ function Carousel() {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="row justify-content-center px-5 pt-5">
-                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-4 mb-3 me-3">
-                      <div className="card-body px-4 py-5">
-                        <div className="row mb-3">
-                          <div className="col-3">
-                            <img src={image1} alt="cus1" />
-                          </div>
-                          <div className="col-9 align-self-center profile">
-                            <h4 className="card-title">Ramesh Pandey</h4>
-                            <p>Local Artisan</p>
-                          </div>
-                        </div>
-                        <div>
-                          <h6 className="card-subtitle mb-2">
-                            Amazing Craftsmanship!
-                          </h6>
-                          <p className="card-text mb-3">
-                            The traditional Uttarakhand crafts sold here are of
-                            excellent quality. I love supporting local artisans
-                            through Uk-बाज़ार!
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-4 mb-3 me-3">
-                      <div className="card-body px-4 py-5">
-                        <div className="row mb-3">
-                          <div className="col-3">
-                            <img src={image2} alt="Cus2" />
-                          </div>
-                          <div className="col-9 align-self-center profile">
-                            <h4 className="card-title">Suhani Rawat</h4>
-                            <p>Shop Owner</p>
-                          </div>
-                        </div>
-                        <div>
-                          <h6 className="card-subtitle mb-2">
+                    <div className="review-card col-12 col-md-6 col-lg-4 border rounded-2 mb-3">
+                      <div className="card-body px-4 py-4">
+                        <div className="text-center">
+                          <h6 className="card-subtitle  mb-2">
                             Great for Gifts!
                           </h6>
-                          <p className="card-text mb-3">
+                          <p className="card-text mb-3 review">
                             Uk-बाज़ार has a fantastic selection of handmade
                             items, perfect for gifting something unique and
                             rooted in Uttarakhand's culture.
                           </p>
+                        </div>
+                        <div className="mb-3">
+                          <div className="text-center  p-2">
+                            <img
+                              src={image}
+                              alt="Cus2"
+                              className="profile-image"
+                            />
+                          </div>
+                          <div className="align-self-center text-center profile">
+                            <h4 className="card-title">Pankaj Khare</h4>
+                            <p>Shop Owner</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </motion.div>
               </div>
-
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
+              {/* Removed the carousel control buttons */}
             </div>
           </div>
         </div>

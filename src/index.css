@@ -76,21 +76,29 @@ p{font-weight: 500; font-size: 18px; color: #9e9a9a;}
     width: 20px;
     height: auto;
 }
+.carousel-arrow{background-color:#000000;}
 
 
 .carousel-indicators .active {
     background: #906CF9;
 }
 .review-card {
-    max-width:100%;
+    width:750px;
+    height: auto;
     background-color: #C1DCDC;
 }
+/* .review{width: auto; height: 70px;} */
 .about{margin-top: 100px;}
 .categories{margin-top: 150px;}
 .explore{margin-bottom: 100px;}
 
 /* footer */
 .social-media{width: 48px; height: 48px;}
-.find-product{max-width: 186px;}
+.find-product{max-width: 200px;}
 .footer{background-color: #C1DCDC;}
-.Reserved{margin-top:100px;}
+.Reserved{margin-top:20px;}
+.Reserved p{font-size: 15px;}
+
+
+
+
